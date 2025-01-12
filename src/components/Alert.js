@@ -6,10 +6,12 @@ export default function Alert(props) {
         return txt.charAt(0).toUpperCase()+txt.slice(1);
     }
   return (
-    props.alert && <div>
+    <div style={{height:"50px"}}>
+    {props.alert && <div>
         <div className={`alert alert-${props.alert.type}`} role="alert">
             <strong>{capt(props.alert.type)} </strong>{props.alert.msg}
         </div>
+    </div>}
     </div>
   )
 }
